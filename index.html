@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="animations.css">
+    <script src="http://code.jquery.com/jquery1.10.1.minjs"></script>
+    <title>Images</title>
+</head>
+<body>
+    <h1>Basic web development technologies</h1>
+    <div id="object" class="slideUp"><img src="HTML.png" alt="HTML" height="200" style="float:left;" class="slideUp"/></div>
+    <p> <h2>H.T.M.L.</h2> 
+        The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. <br> 
+        It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+        Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. <br>
+        HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+        HTML elements are the building blocks of HTML pages. <br>
+        With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page.<br>
+        HTML provides a means to create structured documents by denoting structural semantics for text such as headings,<br>
+        paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Other tags surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.
+        HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.
+         </p>
+         <hr>
+         <h2>C.S.S.</h2>
+         <div id="object" class="pulse"><img src="CSS..png" alt="CSS" height="200" style="float: right;" class="pulse"/></div>
+         <p>              
+            Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. <br>
+            CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+            CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. 
+            This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate. <br> 
+            CSS file which reduces complexity and repetition in the structural content as well as enabling the css file to be cached to improve the page load speed between the pages that share the file and its formatting. <br>
+            Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.
+            The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. <br> This cascading priority scheme is predictable.
+        </p>
+        <hr>
+        <div id="object" class="fadeIn"><img src="JavaScript.jpg" alt="JavaScript" height="200" style="float: left;" class="fadeIn"/></div>
+        <h2>JavaScript</h2>
+        <p>
+            JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. <br>
+            JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+            Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. <br>
+            Over 97% of websites use it client-side for web page behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on the user's device.
+            As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+            The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
+            JavaScript engines were originally used only in web browsers, but they are now core components of other software systems, most notably servers and a variety of applications.
+            Although there are similarities between JavaScript and Java, including language name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
+
+                      </p>
+                      <script>
+                        $(window).scroll(function() {
+                            $('#object').each(function(){
+                            var imagePos = $(this).offset().top;
+                    
+                            var topOfWindow = $(window).scrollTop();
+                                if (imagePos < topOfWindow+400) {
+                                    $(this).addClass("slideUp");
+                                }
+                            });
+                        });
+                    </script>
+                      <script>
+
+                          $('#object').click(function(
+                          ) {
+                              $(this).addClass("slideUp");
+                          });
+                      </script>
+                      </body>
+                      </html>
